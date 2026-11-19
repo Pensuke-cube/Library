@@ -4,7 +4,10 @@
 
 ## 使い方
 
-BinaryTrie(bits) で 0≤x<2^bits。add(x)、min_xor(x)。集合が空のときは None。
+`BinaryTrie(bits)` で空の集合を作る。`bits` は扱うビット数で、各値は `0 <= x < 2**bits` の整数。
+
+- `add(x)` で値 `x` を登録する。
+- `min_xor(x)` は登録値 `y` のうち `x ^ y` が最小になるときの XOR 値を返す。空なら `None`。
 
 ## コード
 

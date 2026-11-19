@@ -4,7 +4,9 @@
 
 ## 使い方
 
-ceil_div(a,b) は b≠0。arithmetic_sum(first,step,n) は n 項の和。isqrt(n) は n≥0。
+- `ceil_div(a, b)` に整数 `a` と 0 でない整数 `b` を渡す。`a/b` 以上の最小整数を返す。
+- `arithmetic_sum(first, step, n)` に初項 `first`、隣り合う項の差 `step`、項数 `n`（0 以上）を整数で渡す。先頭 `n` 項の和を返す。
+- `isqrt(n)` に非負整数を渡し、二乗が `n` 以下になる最大の非負整数を得る。
 
 ## コード
 

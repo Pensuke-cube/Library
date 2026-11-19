@@ -4,7 +4,8 @@
 
 ## 使い方
 
-suffix_array(s) の結果は辞書順の先頭添字。lcp_array(s,sa)[i] は sa[i] と sa[i+1] の LCP。
+- `suffix_array(s)` に文字列を渡す。`s[i:]` が辞書順になるよう並べた 0 始まりの添字列 `sa` を返す。空の接尾辞は含めない。
+- `lcp_array(s, sa)` に同じ文字列と、その `suffix_array(s)` の結果を渡す。`lcp[i]` は辞書順で隣り合う `s[sa[i]:]` と `s[sa[i+1]:]` の先頭が何文字一致するか。
 
 ## コード
 

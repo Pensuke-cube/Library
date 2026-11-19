@@ -4,7 +4,11 @@
 
 ## 使い方
 
-snapshot() を取り、merge(a,b) を実行し、rollback(snap) で戻す。leader の一致で連結を調べる。
+`RollbackDSU(n)` に要素数 `n` を渡す。要素番号は `0` から `n-1` で、最初はすべて別のグループ。
+
+- `merge(a, b)` はグループを結合し、新たに結合したときだけ `True`。
+- `leader(v)` は現在の代表番号。代表が同じなら連結している。
+- `snapshot()` は現在の履歴位置を返す。`uf = RollbackDSU(n)` なら、結合前に `snap = uf.snapshot()` を記録し、後で `uf.rollback(snap)` を呼ぶとその時点までの状態へ戻る。
 
 ## コード
 

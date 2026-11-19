@@ -4,7 +4,7 @@
 
 ## 使い方
 
-[Fenwick 木](fenwick.md)を先に置く。count_le_queries(a,queries) は (l,r,x) ごとに [l,r) 内の x 以下の個数。
+[Fenwick 木](fenwick.md)のコードを先に置く。`count_le_queries(a, queries)` に順序比較できる値のリスト `a` と質問の列を渡す。質問 `(l, r, x)` は `a[l:r]` にある `x` 以下の要素数で、`0 <= l <= r <= len(a)`。答えは質問を渡した順のリスト。
 
 ## コード
 

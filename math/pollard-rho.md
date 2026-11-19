@@ -4,7 +4,7 @@
 
 ## 使い方
 
-[Miller–Rabin](miller-rabin.md)を先に置く。factor64(n) は昇順の素因数列。1≤n<2^64。
+[Miller–Rabin](miller-rabin.md)のコードを先に置く。`factor64(n, seed=0)` に `1 <= n < 2**64` の整数を渡す。積が `n` になる素因数の昇順リストを返し、同じ素因数は指数の回数だけ並ぶ。`n=1` なら `[]`。`seed` は分解に使う乱数の種。
 
 ## コード
 

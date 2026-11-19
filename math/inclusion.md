@@ -4,7 +4,7 @@
 
 ## 使い方
 
-count_multiples(n,values) は 1〜n で正整数 values のいずれかの倍数である数の個数。
+`count_multiples(n, values)` に上限 `n`（0 以上の整数）と正整数の列 `values` を渡す。`1` から `n` のうち `values` のいずれかの値で割り切れる整数の個数を返す。複数の値で割り切れても一度だけ数える。
 
 ## コード
 

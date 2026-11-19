@@ -4,7 +4,9 @@
 
 ## 使い方
 
-SparseTable(a,op).prod(l,r) は空でない [l,r) を集約。op は結合則と op(x,x)=x を満たす。
+`SparseTable(a, op=min)` に変更しない列 `a` と集約関数を渡す。`op(x, y)` には結合則があり、同じ値を重ねても `op(x, x) == x`（最小、最大、GCD など）。
+
+`prod(l, r)` は添字 `l` から `r-1` までを集約した値。`0 <= l < r <= len(a)` の空でない範囲を渡す。
 
 ## コード
 

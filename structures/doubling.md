@@ -4,7 +4,9 @@
 
 ## 使い方
 
-doubling(nxt,max_k) に各頂点の遷移先と最大回数。jump(table,v,k) で遷移する。
+`doubling(nxt, max_k)` に遷移先のリストと最大の遷移回数 `max_k`（0 以上の整数）を渡す。`nxt[v]` は地点 `v` から一回進む先で、`0 <= nxt[v] < len(nxt)`。
+
+`jump(table, v, k)` に作った表、出発地点 `v`、回数 `k` を渡す。`0 <= k <= max_k` で、`v` からちょうど `k` 回進んだ地点を返す。
 
 ## コード
 

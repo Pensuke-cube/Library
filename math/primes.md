@@ -4,7 +4,8 @@
 
 ## 使い方
 
-is_prime_trial(n) は単発判定。sieve(n)[x] は 0≤x≤n の素数フラグ。
+- `is_prime_trial(n)` に整数を一つ渡す。`n` が素数なら `True`。2 未満なら `False`。
+- `sieve(n)` に調べたい上限 `n`（0 以上の整数）を渡す。長さ `n+1` の `bytearray` を返し、`flags[x]` は `x` が素数なら 1、それ以外は 0。複数の値の判定に使い回せる。
 
 ## コード
 

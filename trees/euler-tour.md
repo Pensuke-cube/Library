@@ -4,7 +4,11 @@
 
 ## 使い方
 
-root_tree(g,root) は parent,depth,order,tin,tout。部分木 v は order[tin[v]:tout[v]]。g は無向木。
+`root_tree(g, root=0)` に空でない無向木と、根にする頂点を渡す。`g[v]` は 0 始まりの頂点 `v` の隣接リスト。各辺は両方向を登録する。
+
+- `parent[v]` は親（根だけ `-1`）、`depth[v]` は根から数えた辺数。
+- `order` は DFS で最初に訪れた順の頂点列。頂点 `v` と全子孫は `order[tin[v]:tout[v]]` に入る。
+- 戻り値の順は `(parent, depth, order, tin, tout)`。
 
 ## コード
 

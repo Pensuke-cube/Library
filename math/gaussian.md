@@ -4,7 +4,11 @@
 
 ## 使い方
 
-XorBasis(bits) の add(x) は独立なら True。contains(x) は既存の XOR で x を作れるか。0≤x<2^bits。
+`XorBasis(bits)` に扱うビット数を渡す。各値 `x` は `0 <= x < 2**bits` の整数。
+
+- `add(x)` は既存の値の XOR で作れないときだけ基底に追加して `True` を返す。`rank` は基底の個数。
+- `contains(x)` は登録済みの値の一部を XOR して `x` を作れるか。何も使わない場合の 0 も含む。
+- `reduce(x)` は上位ビットから基底で消した結果。0 なら `x` を作れる。
 
 ## コード
 

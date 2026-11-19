@@ -4,7 +4,11 @@
 
 ## 使い方
 
-[Fenwick 木](fenwick.md)のコードを先に置く。OrderedMultiset(values) に候補値を全て渡す。kth(k) は 0 始まり。存在する個数を超えて削除しない。
+[Fenwick 木](fenwick.md)のコードを先に置く。`OrderedMultiset(values)` に今後登録し得る値をすべて渡す。値は順序比較とハッシュが可能なもの。最初の登録数は 0。
+
+- `add(x, count=1)` は候補値 `x` を `count` 個追加する。負の個数で削除できるが、登録数は負にしない。
+- `count_lt(x)` は `x` 未満、`count_le(x)` は `x` 以下の登録数。境界 `x` は候補値以外でもよい。
+- `kth(k)` は重複を含めて昇順に数えた `k` 番目の値。`k=0` が最小で、`k` は総登録数未満。
 
 ## コード
 

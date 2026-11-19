@@ -4,7 +4,10 @@
 
 ## 使い方
 
-window_min(a,k) は幅 k の区間最小値。previous_smaller(a) は左の最も近い真に小さい要素の添字（なければ -1）。
+`a` に順序比較できる値の列を渡す。
+
+- `window_min(a, k)` は幅 `k`（`1 <= k <= len(a)`）の各連続区間の最小値。`result[l]` は `a[l:l+k]` の最小値。
+- `previous_smaller(a)` の `result[i]` は、`i` より左で `a[i]` より真に小さい要素のうち最も近い添字。なければ `-1`。
 
 ## コード
 

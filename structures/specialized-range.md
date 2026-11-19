@@ -4,7 +4,10 @@
 
 ## 使い方
 
-[Fenwick 木](fenwick.md)を先に置く。RangeAddSum(n) の add(l,r,x) と sum(l,r) は半開区間。初期値は全て 0。
+[Fenwick 木](fenwick.md)のコードを先に置く。`RangeAddSum(n)` で長さ `n` の全要素 0 の配列を作る。
+
+- `add(l, r, x)` は `[l, r)` の全要素に `x` を足す。`x` は負でも可。
+- `sum(l, r)` は `[l, r)` の和、`prefix(r)` は先頭 `r` 個の和。`add` と `sum` は `0 <= l <= r <= n`、`prefix` は `0 <= r <= n`。
 
 ## コード
 

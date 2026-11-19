@@ -4,7 +4,9 @@
 
 ## 使い方
 
-divisors(n) は昇順の正約数。factorize(n) は {素数:指数}。n≥1。spf_table(limit) は複数回の分解用。
+- `divisors(n)` は正整数 `n` の正約数を昇順のリストで返す。
+- `factorize(n, spf=None)` に正整数を渡すと `{素因数: 指数}` を返す。例えば 12 なら `{2: 2, 3: 1}`、1 なら空の辞書。
+- 何度も分解する場合は `spf_table(limit)` に調べる整数の上限を渡す。結果の `spf[x]` は `2 <= x <= limit` で `x` の最小素因数。`factorize(n, spf)` として表を再利用する。`1 <= n <= limit`。
 
 ## コード
 

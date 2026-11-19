@@ -4,7 +4,11 @@
 
 ## 使い方
 
-[篩](primes.md)を先に置く。multiple_transform(a,inverse=False) は a[1:] を倍数和に、divisor_transform(a,inverse=False) は約数和に置換する。逆変換は inverse=True。a[0] は使わない。
+[篩](primes.md)のコードを先に置く。長さ `N+1` の数値リスト `a` を渡し、添字 `1` から `N` を使う。`a[0]` は触らない。
+
+- `multiple_transform(a)` は `a[i]` を、元の添字が `i` の倍数である値の和に置き換える。
+- `divisor_transform(a)` は `a[i]` を、元の添字が `i` の約数である値の和に置き換える。
+- どちらもリストをその場で変更し、戻り値は `None`。同じ関数に `inverse=True` を指定すると対応する変換を逆に適用する。
 
 ## コード
 

@@ -4,7 +4,7 @@
 
 ## 使い方
 
-MergeSortTree(a).count_le(l,r,x) は [l,r) の x 以下の個数。
+`MergeSortTree(a)` に順序比較できる値の列を渡して前計算する。`count_le(l, r, x)` に `0 <= l <= r <= len(a)` と比較する値 `x` を渡すと、`a[l:r]` にある `x` 以下の要素数を返す。同じ値も位置ごとに数える。
 
 ## コード
 

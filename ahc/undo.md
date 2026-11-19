@@ -4,7 +4,11 @@
 
 ## 使い方
 
-run_trial(state,move,apply,undo,evaluate) は候補を一時適用して評価する。apply は復元記録を返す。
+`run_trial(state, move, apply, undo, evaluate)` に変更可能な状態 `state` と試す操作 `move` を渡す。操作を適用した状態の評価値を返し、状態を元に戻す。
+
+- `apply(state, move)` は状態を変更し、古い値などの復元記録を返す。
+- `undo(state, record)` はその記録を使い、状態をその場で元に戻す。
+- `evaluate(state)` は変更後の状態を受け取り、評価値を返す。
 
 ## コード
 

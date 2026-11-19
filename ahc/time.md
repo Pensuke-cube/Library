@@ -4,7 +4,7 @@
 
 ## 使い方
 
-run_batches(seconds,batch,step) は制限まで step() を実行し回数を返す。batch≥1。step が重い場合は小さな batch を指定。
+`run_batches(seconds, batch, step)` に時間枠 `seconds`（0 以上の秒数）、時計を確認する間隔 `batch`（1 以上の整数）、一回分の処理 `step()` を渡す。`step()` を呼んだ回数を返し、`step()` の戻り値は使わない。時間切れはバッチ間で確認する。例えば `batch=16` なら 16 回呼ぶごとに確認する。
 
 ## コード
 

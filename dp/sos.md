@@ -4,7 +4,7 @@
 
 ## 使い方
 
-subset_transform(a,inverse=False) に長さ 2^N の配列を渡す。その場で変更する。
+`subset_transform(a, inverse=False)` に長さが 2 のべき乗の数値リストを渡す。添字は集合を表すビットマスク。`inverse=False` では各 `a[mask]` を `mask` の全ての部分マスクに対応する値の和に置き換える。変換後の同じリストに `inverse=True` を指定すると元に戻る。戻り値は `None`。
 
 ## コード
 

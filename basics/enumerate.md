@@ -4,7 +4,9 @@
 
 ## 使い方
 
-permutations(a)、combinations(a, r)、product(*choices) で各候補を順に得る。
+- `permutations(a)` は列 `a` の全要素を並べる順列、`combinations(a, r)` は `r` 個を順序を区別せず選ぶ組をタプルで列挙する。
+- `product(*choices)` は候補列を引数に並べ、各列から一つずつ選んだ組をタプルで列挙する。例えば `product([0, 1], [2, 3])` の最初は `(0, 2)`。
+- `subsets(a)` は列 `a` の部分集合をリストで列挙する。空集合も含む。いずれも値が同じでも元の位置を区別する。
 
 ## コード
 

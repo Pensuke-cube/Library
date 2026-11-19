@@ -4,7 +4,7 @@
 
 ## 使い方
 
-check_delta(before,after,delta,score) は差分実装の検算用。整数スコアに使う。
+`check_delta(before, after, delta, score)` に操作前後の状態、差分計算で出した整数 `delta`、状態を丸ごと採点する関数 `score(state)` を渡す。`delta == score(after) - score(before)` を確かめ、不一致なら `AssertionError` に計算値と期待値を入れて送出する。成功時は `None`。
 
 ## コード
 

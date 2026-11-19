@@ -4,7 +4,7 @@
 
 ## 使い方
 
-two_opt_delta(tour,l,r,dist) は [l,r) を反転したときの距離増分。0≤l<r≤len(tour)。dist は対称。
+`two_opt_delta(tour, l, r, dist)` の `tour` は頂点番号を訪問順に並べた循環路。出発点を末尾に重ねない。`dist[u][v]` は対称な距離表。添字 `l` から `r-1` までを反転したときの距離増分を返し、負なら短縮。`0 <= l < r <= len(tour)`。実際に反転する場合は `tour[l:r] = tour[l:r][::-1]`。
 
 ## コード
 

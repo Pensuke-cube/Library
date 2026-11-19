@@ -4,7 +4,10 @@
 
 ## 使い方
 
-manhattan_diameter(points) は空でない二次元点列の最大 L1 距離。
+点は二次元の座標 `(x, y)` で渡す。
+
+- `squared_distance(a, b)` は 2 点間の直線距離の二乗。
+- `manhattan_diameter(points)` に空でない点列を渡すと、全点対の `abs(x1-x2) + abs(y1-y2)` の最大値を返す。点が一つなら 0。
 
 ## コード
 

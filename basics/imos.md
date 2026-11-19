@@ -4,7 +4,10 @@
 
 ## 使い方
 
-各更新は (l,r,x) または (上,左,下,右,x)。右端・下端は含めない。
+配列を全て 0 で始め、`updates` の加算をすべて適用した結果を返す。
+
+- `imos(n, updates)` の `n` は配列の長さ。更新 `(l, r, x)` ごとに添字 `l` から `r-1` へ `x` を足す。`0 <= l <= r <= n`。
+- `imos_2d(h, w, updates)` の `h` は行数、`w` は列数。更新 `(top, left, bottom, right, x)` ごとに行 `[top, bottom)` と列 `[left, right)` の交点へ `x` を足す。結果は `a[row][col]`。
 
 ## コード
 

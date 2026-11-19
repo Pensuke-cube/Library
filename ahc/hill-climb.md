@@ -4,7 +4,10 @@
 
 ## 使い方
 
-hill_climb(state, steps, propose, commit) は state を直接改善する。propose(state) は (スコア増分,手) を返し、状態を変更しない。
+`hill_climb(state, steps, propose, commit)` の `state` は変更可能な初期解、`steps` は試行回数。スコアの増加量の合計を返し、採用した変更は `state` に残る。
+
+- `propose(state)` は状態を変更せず、`(変更後スコア − 現在スコア, 操作)` を返す。
+- `commit(state, move)` は候補の操作をその場で適用する。増加量が正のときだけ呼ばれる。
 
 ## コード
 

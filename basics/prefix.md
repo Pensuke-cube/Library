@@ -4,7 +4,8 @@
 
 ## 使い方
 
-p[r]-p[l] は [l,r)。rect_sum の座標は上端、左端、下端、右端で半開区間。
+- `prefix_sum(a)` に数値の列を渡すと、先頭 `r` 個の和を `p[r]` に持つ長さ `len(a)+1` のリストを返す。添字 `l` から `r-1` の和は `p[r] - p[l]`。
+- `prefix_2d(a)` に長方形の数値配列 `a[row][col]` を渡して表 `p` を作る。`rect_sum(p, top, left, bottom, right)` は行 `[top, bottom)`・列 `[left, right)` の長方形の和。下端・右端には行数・列数を指定できる。
 
 ## コード
 

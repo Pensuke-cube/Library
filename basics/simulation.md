@@ -4,7 +4,7 @@
 
 ## 使い方
 
-iterate_state(start, step, t) は遷移 t 回後の状態。状態はハッシュ可能にする。
+`iterate_state(start, step, t)` の `start` は初期状態、`t` は 0 以上の遷移回数。`step(state)` は現在の状態から次の状態を一意に返す関数。状態には整数やタプルなど辞書のキーにできる値を使う。戻り値は `step` を `t` 回適用した状態。
 
 ## コード
 

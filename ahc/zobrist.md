@@ -4,7 +4,9 @@
 
 ## 使い方
 
-zobrist_table(n,k,seed) は N 箇所×K 種類の表。hash_state(a,table) で初期値、変更時に旧値と新値を XOR。
+`zobrist_table(n, k, seed=0)` に状態の要素数 `n` と各要素が取り得る値の種類数 `k` を渡す。値は `0` から `k-1`。同じ `seed` なら同じ表を作る。
+
+`hash_state(a, table)` に長さ `n` の状態列とその表を渡すと整数ハッシュを返す。位置 `i` の値を `old` から `new` に変えるときは `h ^= table[i][old] ^ table[i][new]` で更新する。
 
 ## コード
 

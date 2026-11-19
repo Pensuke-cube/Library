@@ -4,7 +4,11 @@
 
 ## 使い方
 
-anneal(state,score,steps,t0,t1,propose,commit,clone,rng) は最大化用。t0,t1>0。propose(state,rng) は状態を変えず (増分,手) を返す。clone は独立な複製。
+`anneal(state, score, steps, t0, t1, propose, commit, clone, rng)` はスコアを最大化し、`(最良状態, 最良スコア)` を返す。`state` は変更可能な初期解、`score` はその評価値、`steps` は試行回数。`t0` と `t1` は正の開始・終了温度、`rng` は `Random(0)` などの乱数生成器。
+
+- `propose(state, rng)` は候補を作り、`(変更後スコア − 現在スコア, 操作)` を返す。ここでは状態を変更しない。
+- `commit(state, move)` は採用した操作をその場で適用する。
+- `clone(state)` は後続の変更から独立したコピーを返す。渡した `state` には探索終了時点の状態が残る。
 
 ## コード
 

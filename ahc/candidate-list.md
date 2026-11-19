@@ -4,7 +4,7 @@
 
 ## 使い方
 
-nearest_candidates(dist,k) は各点の近い K 点。自己点を除く。dist[i][j] は点 i から j への距離。
+`nearest_candidates(dist, k)` に距離表 `dist[i][j]` と、各点につき残す候補数 `k`（0 以上）を渡す。頂点番号は 0 始まり、表は頂点数と同じ行数・列数にする。戻り値の `candidates[i]` は点 `i` 自身を除いた近い順の頂点番号で、最大 `k` 個。
 
 ## コード
 

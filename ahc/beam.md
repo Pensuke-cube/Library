@@ -4,7 +4,12 @@
 
 ## 使い方
 
-beam_search(start,depth,width,expand,evaluate) は各層の状態を高評価順に返す。expand(state) は独立した子状態の列。width≥1。
+`beam_search(start, depth, width, expand, evaluate)` の `start` は初期状態、`depth` は何手先まで進めるか、`width` は各手で残す候補の上限（1 以上）。
+
+- `expand(state)` はその状態から一手で作れる独立した子状態を列挙する。
+- `evaluate(state)` は比較可能な評価値を返す。値が大きい状態を優先する。
+
+指定した深さの候補を評価値の降順で返す。途中で子候補が尽きた場合は `[]`、`depth=0` なら `[start]`。
 
 ## コード
 

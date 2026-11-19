@@ -4,7 +4,7 @@
 
 ## 使い方
 
-[Union-Find](../structures/dsu.md)を先に置く。kruskal(n,edges) の辺は (u,v,w)。合計重みと採用辺を返す。
+[Union-Find](../structures/dsu.md)のコードを先に置く。`kruskal(n, edges)` に頂点数 `n` と無向辺 `(u, v, 重み)` の列を渡す。頂点番号は `0` から `n-1`。`(合計重み, 採用した辺のリスト)` を返す。グラフが非連結なら、連結成分ごとの最小全域木を合わせた森になる。
 
 ## コード
 

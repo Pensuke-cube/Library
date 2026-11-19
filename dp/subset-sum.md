@@ -4,7 +4,7 @@
 
 ## 使い方
 
-subset_sum(a,target) は和が target になる部分集合の有無。target≥0、a の値は非負。
+`subset_sum(a, target)` に非負整数の列 `a` と目標の和 `target`（0 以上の整数）を渡す。各位置を高々一度使い、合計をちょうど `target` にできるなら `True`。空集合も選べるので `target=0` は常に `True`。
 
 ## コード
 

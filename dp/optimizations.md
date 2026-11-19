@@ -4,7 +4,7 @@
 
 ## 使い方
 
-monotone_dp_row(prev,cost) は dp[i]=min(prev[j]+cost(j,i))（0≤j<i）を返す。最小の最適 j が i に対し非減少であることが必要。
+`monotone_dp_row(prev, cost)` の `prev[j]` に一つ前の DP 行（添字 `0` から `N`）、`cost(j, i)` に分割点 `j` から `i` への費用を返す関数を渡す。結果の `dp[i]` は `0 <= j < i` での `prev[j] + cost(j, i)` の最小値。`dp[0]` は `float("inf")`。同点なら最小の `j` を選んだとき、その `j` が `i` とともに非減少であること。
 
 ## コード
 

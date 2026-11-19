@@ -4,7 +4,7 @@
 
 ## 使い方
 
-lns(state,steps,rebuild,score,rng) で最大化。rebuild(state,rng) は元の状態を変更せず、実行可能な候補を返す。
+`lns(state, steps, rebuild, score, rng)` で初期解 `state` から `steps` 回試行する。`rebuild(state, rng)` は元の状態を変えず、制約を満たす修復済みの候補を返す。`score(state)` は大きいほど良い評価値、`rng` は `Random(0)` などの乱数生成器。`(最良状態, 最良スコア)` を返す。
 
 ## コード
 

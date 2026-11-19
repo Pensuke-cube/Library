@@ -4,7 +4,10 @@
 
 ## 使い方
 
-lis_length(a) は長さ、lis_indices(a) は最長増加部分列の一つを添字列で返す。非減少を求めるなら bisect_left を bisect_right に替える。
+`a` に数値など順序比較できる値の列を渡す。元の順を保ちつつ、同値を含まない狭義増加の部分列を求める。
+
+- `lis_length(a)` は最大長。`lis_indices(a)` はその長さを達成する 0 始まりの添字列。
+- 元の値の列が必要なら `[a[i] for i in lis_indices(a)]`。同値を許す非減少列ではコード中の `bisect_left` を `bisect_right` に替える。
 
 ## コード
 

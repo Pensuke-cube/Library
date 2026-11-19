@@ -4,7 +4,7 @@
 
 ## 使い方
 
-bounded_distributions(caps,k,mod) は子 i に 0〜caps[i] 個配り、合計 k 個にする方法数。
+`bounded_distributions(caps, k, mod)` の `caps[i]` は人 `i` に配れる上限（0 以上の整数）、`k` は配る総数（0 以上）、`mod` は正の法。各人に 0 個から上限まで配り、合計がちょうど `k` 個になる配分数を `mod` で割った余りを返す。
 
 ## コード
 

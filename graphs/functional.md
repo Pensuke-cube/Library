@@ -4,7 +4,7 @@
 
 ## 使い方
 
-functional_graph(nxt) は (閉路までの距離, 最終的に着く閉路の長さ) の二配列。
+`functional_graph(nxt)` に全頂点の行き先を並べたリストを渡す。`nxt[v]` は `v` が一歩で進む頂点で、各値は `0` から `len(nxt)-1`。`(distance, length)` を返す。`distance[v]` は閉路に初めて入るまでの歩数、`length[v]` はその閉路の頂点数。
 
 ## コード
 

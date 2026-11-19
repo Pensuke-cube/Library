@@ -4,7 +4,10 @@
 
 ## 使い方
 
-[巻き戻し Union-Find](../structures/rollback-dsu.md)を先に置く。dynamic_connectivity(n,ops) の操作は (kind,u,v)。kind は "+", "-", "?"。有効辺の重複追加や存在しない辺の削除は不可。
+[巻き戻し Union-Find](../structures/rollback-dsu.md)のコードを先に置く。`dynamic_connectivity(n, ops)` に頂点数 `n` と、時系列順のリスト `ops` を渡す。各操作は `(kind, u, v)` で頂点番号は `0` から `n-1`。
+
+- `"+"` は無向辺 `u-v` を追加、`"-"` は存在する辺を削除、`"?"` は二頂点が連結かを調べる。初期状態に辺はなく、有効な辺の重複追加は不可。
+- 戻り値は `"?"` の結果だけを時系列順に並べた真偽値のリスト。
 
 ## コード
 

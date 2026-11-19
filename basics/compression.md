@@ -4,7 +4,7 @@
 
 ## 使い方
 
-compress(a) は圧縮列、昇順の元の値を返す。
+`compress(a)` に順序比較とハッシュができる値の列 `a` を渡す。`(ranks, values)` を返し、`values` は重複を除いた昇順リスト。`ranks[i]` は元の `a[i]` を `values` 内の 0 始まりの位置に置き換えた値で、`values[ranks[i]]` で元に戻せる。
 
 ## コード
 
